@@ -64,14 +64,14 @@ export default function MaintenanceList() {
 
     return (
         <div className="max-w-3xl mx-auto p-6">
-            <h1 className="text-3xl font-bold text-center mb-8">🛠️ Maintenance Records</h1>
+            <h1 className="text-3xl font-bold text-center mb-8"> Bookings Records</h1>
 
             <div className="flex justify-end mb-6">
                 <button
                     onClick={() => setShowModal(true)}
                     className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                 >
-                    ➕ Add Maintenance
+                    ➕ Add Booking
                 </button>
             </div>
 

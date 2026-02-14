@@ -93,12 +93,12 @@ export default function Vehicles() {
 
   return (
     <div className="max-w-3xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-center mb-10">🚗 Vehicles List</h1>
+      <h1 className="text-3xl font-bold text-center mb-10">Company List</h1>
 
       <div className="flex justify-between items-center mb-6">
         <p className="text-gray-600">👋 Welcome, {auth?.user?.username}</p>
         <div className="flex gap-4">
-          <button onClick={() => navigate("/vehicles/new")} className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Vehicle</button>
+          <button onClick={() => navigate("/vehicles/new")} className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Company</button>
           <button onClick={handleLogout} className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Logout</button>
           <button onClick={() => navigate("/maintenance")} className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"> 🛠️ Maintenance </button>
           <button onClick={() => navigate('/invoices')} className="bg-purple-500 text-white px-4 py-2 rounded" > 📄 Invoices </button>

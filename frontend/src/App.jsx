@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 import Vehicles from "./pages/Vehicles";
 import AddVehicle from "./pages/AddVehicle";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -12,11 +13,13 @@ import EditMaintenance from "./pages/EditMaintenance";
 import ArchivedInvoices from "./pages/invoices/ArchivedInvoices";
 import Dashboard from "./pages/Dashboard";
 import AddPartOrder from "./pages/AddPartOrder";
+import StatusPage from "./components/StatusPage";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Login />} />
+      <Route path="/register" element={<Register />} />
       <Route
         path="/vehicles"
         element={
@@ -30,6 +33,14 @@ function App() {
         element={
           <ProtectedRoute>
             <AddVehicle />
+          </ProtectedRoute>
+        }
+      />
+         <Route
+        path="/status"
+        element={
+          <ProtectedRoute>
+            <StatusPage />
           </ProtectedRoute>
         }
       />

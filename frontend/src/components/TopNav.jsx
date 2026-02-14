@@ -22,15 +22,17 @@ export default function TopNav() {
                     onClick={() => navigate("/dashboard")}
                     title="Go to Dashboard"
                 >
-                    VMS <span className="text-blue-600">Dashboard</span>
+                  Kera <span className="text-blue-600">Cab </span>
                 </div>
 
                 {/* Middle: Quick links */}
                 <nav className="hidden sm:flex items-center gap-3 text-sm">
                     {/* NOTE: NavLink applies an active class automatically, we style it via a function */}
                     <AppLink to="/dashboard">Dashboard</AppLink>
-                    <AppLink to="/vehicles">Vehicles</AppLink>
-                    <AppLink to="/maintenance">Maintenance</AppLink>
+                    <AppLink to="/vehicles">Add Company</AppLink>
+                    <AppLink to="/maintenance">Add Booking</AppLink>
+                    <AppLink to="/status">Status</AppLink>
+
                     <AppLink to="/invoices">Invoices</AppLink>
                 </nav>
 

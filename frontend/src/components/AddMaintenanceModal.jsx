@@ -81,12 +81,12 @@ export default function AddMaintenanceModal({ visible, onClose, onSave, vehicles
     return (
         <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
             <div className="bg-white p-6 rounded shadow-lg w-[500px] space-y-4 max-h-[90vh] overflow-y-auto">
-                <h2 className="text-xl text-center font-bold">➕ Add Maintenance</h2>
+                <h2 className="text-xl text-center font-bold">➕ Add Booking</h2>
 
                 {errorMessage && <div className="text-red-600">{errorMessage}</div>}
 
                 <select name="vehicleId" value={form.vehicleId} onChange={handleChange} className="w-full border p-2 rounded">
-                    <option value="">-- Select Vehicle --</option>
+                    <option value="">-- Select Company --</option>
                     {vehicles.map(v => (
                         <option key={v._id} value={v._id}>
                             {v.brand} {v.model} ({v.plateNumber})
@@ -95,8 +95,8 @@ export default function AddMaintenanceModal({ visible, onClose, onSave, vehicles
                 </select>
 
                 <input
-                    name="serviceDate"
-                    type="date"
+                    name=""
+                    type="date of Travel"
                     value={form.serviceDate}
                     onChange={handleChange}
                     className="w-full border p-2 rounded"
@@ -104,7 +104,7 @@ export default function AddMaintenanceModal({ visible, onClose, onSave, vehicles
 
                 {/* Services Section */}
                 <div>
-                    <h4 className="font-semibold mb-2">Services:</h4>
+                    {/* <h4 className="font-semibold mb-2">Services:</h4> */}
                     {form.services.map((srv, idx) => (
                         <div key={idx} className="flex gap-2 mb-2">
                             <input
@@ -121,28 +121,38 @@ export default function AddMaintenanceModal({ visible, onClose, onSave, vehicles
                                 className="w-24 border p-2 rounded"
                             />
                             <button onClick={() => removeService(idx)} className="text-red-600 hover:text-red-800">🗑️</button>
+                            
                         </div>
                     ))}
-                    <button onClick={addService} className="text-blue-600 hover:underline mt-1">+ Add Service</button>
+                    {/* <button onClick={addService} className="text-blue-600 hover:underline mt-1">+ Add Service</button> */}
+                    {/* <button onClick={addService} className="text-blue-600 hover:underline mt-1">+ Name of Guest</button>
+                     */}
+                     <div>
+
+                     <div>
+                     <input className="w-full border p-2 rounded mb-4" placeholder="Name of Guest" />
+
+                     </div>
+                     <input className="w-full border p-2 rounded" placeholder="Number of Days" />
+                     </div>
+
+
                 </div>
 
                 {/* Parts Section */}
                 <div>
-                    <h4 className="font-semibold mb-2">Parts Used:</h4>
+                    <h4 className="font-semibold mb-2">Select Vehicle</h4>
                     <div className="max-h-40 overflow-y-auto space-y-1 border p-2 rounded">
                         {availableParts.map(part => (
                             <label key={part._id} className="flex items-center gap-2 text-sm">
-                                <input
-                                    type="checkbox"
-                                    checked={form.partsUsed.includes(part._id)}
-                                    onChange={() => {
-                                        const exists = form.partsUsed.includes(part._id);
-                                        const updated = exists
-                                            ? form.partsUsed.filter(id => id !== part._id)
-                                            : [...form.partsUsed, part._id];
-                                        setForm(prev => ({ ...prev, partsUsed: updated }));
-                                    }}
-                                />
+                               <select>
+                                <li>jksdfs</li>
+                                <li>jksdfs</li>
+                                <li>jksdfs</li>
+                                <li>jksdfs</li>
+                                <li>jksdfs</li>
+
+                               </select>
                                 <span>{part.name}</span>
                             </label>
                         ))}
