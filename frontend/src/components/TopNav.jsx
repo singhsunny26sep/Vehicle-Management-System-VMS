@@ -32,7 +32,6 @@ export default function TopNav() {
                     <AppLink to="/vehicles">Add Company</AppLink>
                     <AppLink to="/maintenance">Add Booking</AppLink>
                     <AppLink to="/status">Status</AppLink>
-
                     <AppLink to="/invoices">Invoices</AppLink>
                 </nav>
 
